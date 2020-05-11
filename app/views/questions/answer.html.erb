@@ -1,0 +1,13 @@
+<h1>Your message</h1>
+<h2><%= @question%></h2>
+<h1>Your coach:</h1>
+
+<% if @question != ""%>
+  <% if @question.downcase == "i am going to work right now!"%>
+    <h2>I love it</h1>
+  <% elsif @question.end_with?("?")%>
+    <h2>Silly question, get dressed and go to work!</h1>
+  <% else%>
+    <h2>I don't care, get dressed and go to work!</h1>
+  <% end%>
+<% end%>
